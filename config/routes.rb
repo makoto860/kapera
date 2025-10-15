@@ -1,0 +1,7 @@
+Rails.application.routes.draw do
+  mount Spree::Core::Engine, at: '/spree'
+  root to: 'home#index'
+  resources :cart, only: :index, controller: 'cart'
+  resources :products, only: [:show]
+  resources :categories, only: [:show]
+end
