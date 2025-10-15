@@ -1,0 +1,18 @@
+<section class="Category">
+  <div class="Container">
+    <h2 class="Category__title">CATEGORY</h2>
+    <ul class="CategoryList">
+      <% taxons.each do |taxon| %>
+        <li class="CategoryItem">
+          <div class="CategoryItem__image-wrapper">
+            <%= image_tag("home/category/#{image_name_for_taxon(taxon)}.jpg", alt: taxon.name) %>
+            <div class="CategoryItem__masking">
+              <%= link_to 'VIEW', category_path(taxon.id), class: "CategoryItem__button" %>
+            </div>
+          </div>
+          <h3 class="CategoryItem__name"><%= taxon.name %></h3>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
