@@ -1,0 +1,8 @@
+<li class="Breadcrumb__item">
+  <%= link_to 'ホーム', root_path, class: 'Breadcrumb__item Breadcrumb__item--link' %>
+</li>
+<% categories.each do |category| %>
+  <li class="Breadcrumb__item">
+    <%= link_to category.name, category_path(category.id), class: "Breadcrumb__item Breadcrumb__item--link" %>
+  </li>
+<% end %>
