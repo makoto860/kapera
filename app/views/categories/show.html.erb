@@ -1,0 +1,12 @@
+<% provide(:title, @taxon.name) %>
+<div class="CategoriesContainer">
+  <ul class="Breadcrumb">
+    <%= render 'shared/breadcrumb', categories: @categories %>
+  </ul>
+  <h1 class="CategoriesTitle"><%= @taxon.name %></h1>
+  <section class="CategoryProducts">
+    <ul class="CategoryProducts__list">
+      <%= render partial: 'products/product', collection: @products %>
+    </ul>
+  </section>
+</div>
