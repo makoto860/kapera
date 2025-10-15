@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <%= render 'layouts/head' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header', taxons: @taxons %>
+
+    <%= yield %>
+
+    <%= render 'layouts/footer' %>
+
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>
