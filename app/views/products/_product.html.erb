@@ -1,0 +1,11 @@
+<li class="CategoryProduct">
+  <%= link_to product_path(product.id) do %>
+    <%= image_tag product.images.first.attachment(:product), class: 'CategoryProduct__image' %>
+    <p class="CategoryProduct__name">
+      <%= product.name %>
+    </p>
+    <span class="CategoryProduct__price">
+      <%= product.display_price %>
+    </span>
+  <% end %>
+</li>
