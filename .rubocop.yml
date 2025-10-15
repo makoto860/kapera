@@ -1,0 +1,21 @@
+inherit_from:
+  - .rubocop_airbnb.yml
+plugins:
+  - rubocop-rspec_rails
+  - rubocop-rails
+
+Layout/LineLength:
+  Max: 135
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
+    - 'config/**/*'
+    - 'lib/tasks/*'
+    - 'vendor/**/*'
+    - 'path/ruby'
